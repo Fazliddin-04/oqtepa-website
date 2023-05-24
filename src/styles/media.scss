@@ -1,0 +1,12 @@
+$xxl: 1440px;
+$xl: 1248px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xsm: 380px;
+
+@mixin media($size: $xl) {
+  @media (min-width: $size) {
+    @content;
+  }
+}

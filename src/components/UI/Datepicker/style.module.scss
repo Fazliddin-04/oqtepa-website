@@ -1,0 +1,42 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+
+.formControl {
+  width: 100%;
+  label {
+    font-size: rem(14);
+    color: var(--black-2);
+  }
+  .input_wrapper {
+    margin-top: rem(4);
+    height: fit-content;
+    position: relative;
+    .input {
+      width: 100%;
+      border: 1px solid var(--lightgray-3);
+      padding: rem(10) rem(16);
+      border-radius: rem(12);
+      transition: 150ms;
+      &:focus {
+        border-color: var(--primary-color);
+        outline: none;
+      }
+    }
+    .icon {
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      right: rem(20);
+      color: var(--midgray-1);
+      transform: translateY(-50%);
+    }
+  }
+  @include media($lg) {
+    label {
+      font-size: rem(16);
+    }
+    .input_wrapper {
+      margin-top: rem(8);
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+
+.box {
+  background: #fff;
+  margin: rem(66) auto rem(16);
+  .title {
+    margin-bottom: rem(16);
+  }
+  .flexbox {
+    display: flex;
+    & > div {
+      flex: 1;
+    }
+  }
+  @include media($lg) {
+    margin: rem(32) auto;
+    border-radius: rem(24);
+    .title {
+      margin-bottom: rem(32);
+      font-size: rem(32);
+    }
+  }
+}
+
+.empty {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .box {
+    background-color: #fff;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+    margin: auto;
+    border-radius: rem(12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: rem(550);
+    width: 100%;
+    padding: rem(40) rem(20);
+    h3 {
+      font-size: rem(20);
+      font-weight: 700;
+      margin-top: rem(32);
+      margin-bottom: rem(8);
+    }
+    p {
+      color: var(--text-light);
+      margin-bottom: rem(32);
+    }
+    a {
+      width: fit-content;
+    }
+  }
+  @include media($md) {
+    .box {
+      border-radius: rem(12);
+      padding: rem(40);
+      h3 {
+        font-size: rem(24);
+        margin-top: rem(32);
+      }
+    }
+  }
+}

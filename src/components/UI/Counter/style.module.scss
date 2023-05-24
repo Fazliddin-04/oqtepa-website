@@ -1,0 +1,73 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+
+.counter {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  border-radius: rem(20);
+  overflow: hidden;
+  user-select: none;
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media($lg) {
+      flex: 1;
+    }
+  }
+  .value {
+    font-weight: 600;
+  }
+  .button {
+    flex: 1;
+    appearance: none;
+    background: none;
+    font-size: rem(12);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.15s;
+    @include media($lg) {
+      &:first-of-type {
+        padding-left: 16px;
+      }
+      &:last-of-type {
+        padding-right: 16px;
+      }
+    }
+  }
+  &.unstyled {
+    border: none;
+    min-width: none;
+    gap: rem(8);
+    border-radius: 0;
+    .button {
+      height: 100%;
+      font-size: rem(8);
+      border: none;
+      cursor: pointer;
+      border-radius: rem(4);
+      transition: all 0.15s;
+      padding: 0;
+      &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      &:hover,
+      &:focus {
+        background-color: var(--lightgray-2);
+      }
+      &:not(.disabled):active {
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+  &.small {
+    .button {
+      svg {
+        font-size: rem(16);
+      }
+    }
+  }
+}

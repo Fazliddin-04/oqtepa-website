@@ -1,0 +1,39 @@
+@import 'styles/unit.scss';
+
+.status {
+  width: rem(48);
+  height: rem(48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  color: #b0babf;
+  &.active {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  &.error {
+    background-color: #e64f3a;
+    color: #fff;
+  }
+  &_container {
+    h2 {
+      text-align: center;
+      font-size: rem(32);
+      margin: rem(20) 0;
+    }
+  }
+  &_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+    .dash {
+      width: rem(12);
+      height: rem(4);
+      border-radius: 2px;
+      background-color: #d9d9d9;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+@import 'styles/common.scss';
+
+.drawer {
+  padding-left: rem(32);
+  width: rem(320);
+  background: #fff;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 40;
+  transform: translateX(-100%);
+  transition: 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &.visible {
+    transform: translateX(-32px);
+  }
+  &_top {
+    padding: 0 rem(8) 0 rem(28);
+    height: rem(60);
+    background: #f6f8f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h3 {
+      font-size: rem(20);
+      font-weight: 600;
+    }
+    .iconButton {
+      border-radius: rem(12);
+    }
+  }
+  .details {
+    padding: 1rem;
+    .list_item {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      height: rem(44);
+      font-size: rem(16);
+      border-radius: rem(12);
+      margin-bottom: rem(3);
+      &:hover {
+        background-color: #f6f8f9;
+      }
+      &.active {
+        background-color: #f6f8f9;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        color: var(--primary-color);
+      }
+    }
+    .user_details {
+      font-size: rem(16);
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e5e9eb;
+      margin: 1rem 0;
+      position: relative;
+      .flexbox_align_center {
+        margin-bottom: rem(8);
+        gap: rem(10);
+        .icon {
+          width: rem(34);
+          height: rem(34);
+          border-radius: rem(155);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--primary-color);
+          background-color: var(--secondary-color);
+        }
+      }
+      .no_signed {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+    }
+  }
+  @include media($lg) {
+    width: rem(290);
+    &_top {
+      padding: 0 rem(16) 0 rem(24);
+      height: rem(72);
+      h3 {
+        font-size: rem(24);
+      }
+    }
+    .details {
+      .list_item {
+        height: rem(56);
+        font-size: rem(18);
+      }
+    }
+    .mobile,
+    .user_details,
+    .langs {
+      display: none;
+    }
+  }
+}
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 30;
+  background-color: #0008;
+  transition: opacity 150ms;
+}

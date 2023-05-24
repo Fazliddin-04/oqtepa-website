@@ -1,0 +1,107 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+@import 'styles/common.scss';
+
+.profile {
+  margin: rem(66) 0 rem(40);
+  h2 {
+    font-size: rem(24);
+    margin-bottom: rem(16);
+  }
+  .box {
+    max-width: rem(736);
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.04);
+    border-radius: rem(12);
+    padding: 1rem;
+    margin-bottom: rem(35);
+    h3 {
+      font-size: rem(20);
+      margin-bottom: rem(17);
+    }
+    .grid_col_2 {
+      grid-template-columns: 1fr;
+      gap: rem(12);
+      small {
+        color: #8d8488;
+        font-size: rem(14);
+        margin-bottom: rem(4);
+      }
+      p {
+        font-weight: 500;
+      }
+    }
+    .edit {
+      border-top: 1px solid #e5e9eb;
+      margin-top: rem(43);
+      padding-top: rem(25);
+      &_text {
+        color: var(--primary-color);
+        font-size: rem(14);
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+    .form {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 1s;
+      &.active {
+        max-height: 272px;
+      }
+      .actions {
+        margin-top: rem(18);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: rem(12);
+      }
+    }
+    .preview {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 1s;
+      &.active {
+        max-height: 222px;
+      }
+    }
+  }
+  .logout {
+    font-weight: 500;
+    font-size: rem(16);
+    color: #8d8488;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 150ms;
+    &:hover {
+      color: red;
+    }
+  }
+  @include media($lg) {
+    margin: rem(32) 0 rem(40);
+    h2 {
+      font-size: rem(32);
+      margin-bottom: rem(20);
+    }
+    .box {
+      padding: rem(22) rem(24);
+      .grid_col_2 {
+        grid-template-columns: 1fr 1fr;
+      }
+      .form {
+        &.active {
+          max-height: 172px;
+        }
+      }
+      .preview {
+        &.active {
+          max-height: 172px;
+        }
+      }
+    }
+    .logout {
+      font-size: rem(18);
+    }
+  }
+}

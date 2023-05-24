@@ -1,0 +1,24 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+
+.authDialog {
+  .buttonText {
+    color: var(--primary-color);
+    text-align: center;
+    cursor: pointer;
+  }
+  .buttonWrapper {
+    padding-top: rem(24);
+  }
+  .countdownWrapper {
+    margin-top: rem(24);
+  }
+  .otp_form {
+    margin-top: rem(16);
+  }
+  @include media($lg) {
+    .buttonWrapper {
+      padding-top: 2rem;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+
+.about {
+  min-height: 60vh;
+  margin: rem(66) 0 rem(24);
+  .title {
+    font-size: rem(24);
+    font-weight: 600;
+    margin-bottom: rem(16);
+  }
+  .image {
+    position: relative;
+    overflow: hidden;
+    border-radius: rem(16);
+    height: rem(164);
+  }
+  p {
+    margin-top: rem(22);
+    max-width: rem(818);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--darkgray-2);
+  }
+  a {
+    color: var(--primary-color);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @include media($lg) {
+    margin: rem(32) 0;
+    .title {
+      font-size: rem(32);
+      margin-bottom: rem(24);
+    }
+    .image {
+      border-radius: rem(12);
+      height: rem(300);
+    }
+    p {
+      margin-top: 2rem;
+    }
+  }
+}

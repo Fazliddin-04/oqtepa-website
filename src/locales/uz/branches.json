@@ -1,0 +1,18 @@
+{
+  "daily": "Har kuni",
+  "branches": "Filiallar",
+  "branch": "Filial",
+  "list": "Ro'yxat",
+  "map": "Xarita",
+  "opening_hours": "Ish vaqti",
+  "schedule": "Ish vaqti",
+  "address": "Manzil",
+  "phone_number": "Telefon raqami",
+  "phone": "Telefon",
+  "destination": "Mo'ljal",
+  "mon-sun": "Du-Yak",
+  "open_until": "{{work_hour_end}} gacha ochiq",
+  "closed_until": "{{work_hour_start}} gacha yopiq",
+  "works_around_the_clock": "Kechayu kunduz ishlaydi",
+  "order_pickup": "Olib ketishga buyurtma berish"
+}

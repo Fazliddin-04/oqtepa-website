@@ -1,0 +1,26 @@
+@import 'styles/unit.scss';
+@import 'styles/common.scss';
+
+.ModifierCheckbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: rem(12);
+  width: 100%;
+  &.single {
+    padding: rem(3) rem(16);
+    border: 1px solid var(--lightgray-2);
+    border-radius: 12px;
+  }
+  :global .MuiFormControlLabel-label {
+    font-size: rem(12);
+  }
+  .counter {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .flexbox {
+    gap: rem(8);
+  }
+}

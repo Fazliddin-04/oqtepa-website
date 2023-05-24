@@ -1,0 +1,56 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: rem(12) rem(24);
+  border-radius: rem(20);
+  font-size: rem(14);
+  font-weight: 500;
+  transition: 150ms ease;
+  white-space: nowrap;
+  line-height: rem(20);
+  cursor: pointer;
+  &:hover {
+    opacity: 0.95;
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+  &.secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  &.disabled {
+    cursor: not-allowed;
+    background: var(--lightgray-2);
+    color: var(--text-light);
+  }
+  &.grayscale {
+    background: var(--lightgray-4);
+    color: var(--darkgray-2);
+    &_hover {
+      background: transparent;
+      color: var(--darkgray-2);
+      &:hover {
+        background: var(--lightgray-4);
+      }
+    }
+  }
+  &.sm {
+    padding-top: rem(6);
+    padding-bottom: rem(6);
+    height: auto;
+    width: 100%;
+  }
+  @include media($lg) {
+    &.sm {
+      padding-top: rem(10);
+      padding-bottom: rem(10);
+    }
+  }
+}

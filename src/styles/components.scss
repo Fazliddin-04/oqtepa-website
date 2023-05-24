@@ -1,0 +1,20 @@
+@import 'unit';
+
+@mixin nav_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: rem(8);
+  font-size: rem(14);
+  transition: 300ms;
+  div.icon {
+    padding: rem(7);
+    border-radius: rem(155);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+  }
+}

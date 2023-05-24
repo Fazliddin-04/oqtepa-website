@@ -1,0 +1,79 @@
+@import 'unit';
+@import '../../public/fonts/font.css';
+
+:root {
+  --primary-color: #e62b40;
+  --secondary-brand-color: #fdc900;
+  --secondary-color: #f4e1e3;
+  --black-1: #000;
+  --black-2: #292929;
+  --text-light: #808080;
+  --background: #fefefe;
+  --lightgray: #f6f8f9;
+  --lightgray-2: #dde2e4;
+  --lightgray-3: #e5e9eb;
+  --lightgray-4: #eef0f2;
+  --midgray-1: #5b6871;
+  --midgray-2: #6e7c87;
+  --darkgray-1: #1a2024;
+  --darkgray-2: #252c32;
+  --darkgray-3: #303940;
+  --darkgray-4: #48535b;
+  --darkgray-5: #48535b;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--black-1);
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input,
+textarea {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: rem(5);
+  opacity: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #aeaeae;
+  border-radius: 3px;
+}

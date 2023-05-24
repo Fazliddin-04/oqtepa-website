@@ -1,0 +1,57 @@
+@import 'styles/unit.scss';
+@import 'styles/common.scss';
+
+.card_preview {
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  padding: rem(20);
+  height: fit-content;
+  .flexbox_justify_center {
+    gap: rem(12);
+  }
+  .flexbox_align_center {
+    gap: rem(4);
+  }
+  & > div {
+    &:not(:first-of-type, .bill) {
+      p:first-of-type {
+        margin-bottom: rem(10);
+      }
+    }
+    &:not(:last-of-type) {
+      border-bottom: 1px solid #f4f4f4;
+      padding-bottom: rem(30);
+      margin-bottom: rem(30);
+    }
+    &:first-of-type {
+      .flexbox_justify_center {
+        margin-top: rem(30);
+        .flexbox_align_center {
+          color: var(--darkgray-5);
+          cursor: pointer;
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+    &.bill {
+      .text_midgray_1 {
+        margin-bottom: rem(10);
+      }
+      .flexbox_between:not(:last-of-type) {
+        margin-bottom: rem(6);
+      }
+      p {
+        font-size: rem(15);
+        font-weight: 500;
+      }
+      .lg_bold {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "daily": "Daily",
+  "branches": "Branches",
+  "branch": "Branch",
+  "list": "List",
+  "map": "Map",
+  "opening_hours": "Opening hours",
+  "schedule": "Schedule",
+  "address": "Address",
+  "phone_number": "Phone Number",
+  "phone": "Phone",
+  "destination": "Destination",
+  "mon-sun": "Mon-Sun",
+  "open_until": "Open until {{work_hour_end}}",
+  "closed_until": "Closed until {{work_hour_start}}",
+  "works_around_the_clock": "Works around the clock",
+  "order_pickup": "Order pickup"
+}

@@ -1,0 +1,109 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+@import 'styles/components.scss';
+@import 'styles/common.scss';
+
+.header {
+  .links {
+    display: none;
+    align-items: center;
+    gap: rem(32);
+    .link {
+      cursor: pointer;
+      transition: 150ms;
+      &.active {
+        text-shadow: 0.5px 0 0 currentColor;
+      }
+      &:hover {
+        text-shadow: 0.5px 0 0 currentColor;
+      }
+    }
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    &:last-of-type {
+      gap: 0;
+    }
+  }
+  .langs {
+    display: none;
+  }
+  .logo {
+    position: relative;
+    height: rem(48);
+    width: rem(88);
+  }
+  .addressButton {
+    display: none;
+    p.address {
+      color: var(--primary-color);
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &.mobile {
+    padding-top: rem(50);
+    border-bottom: 1px solid #e5e9eb;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.04);
+    .mobile_address {
+      display: flex;
+      align-items: center;
+      height: rem(50);
+      font-size: rem(14);
+      background-color: #d9d9d91a;
+      div.icon {
+        color: var(--primary-color);
+      }
+    }
+  }
+  @include media($lg) {
+    .links {
+      display: flex;
+    }
+    .addressButton {
+      display: flex;
+      cursor: pointer;
+      gap: rem(8);
+      font-size: rem(14);
+      transition: 300ms;
+      div.icon {
+        padding: rem(6);
+        border-radius: 50%;
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+        & + div {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0;
+        }
+      }
+      p {
+        font-size: rem(13);
+        max-width: rem(230);
+        &.address {
+          font-size: rem(13);
+        }
+      }
+    }
+    .wrapper {
+      gap: rem(40);
+      &:last-of-type {
+        gap: rem(32);
+      }
+    }
+    .langs {
+      @include nav_item;
+    }
+    .logo {
+      height: rem(68);
+      width: rem(130);
+    }
+  }
+}

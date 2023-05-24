@@ -1,0 +1,140 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+
+.card {
+  height: rem(264);
+  border-radius: rem(12);
+  background-color: #fff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+  width: rem(150);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &.small {
+    height: rem(224);
+    width: rem(170);
+    .card_img {
+      height: rem(100);
+    }
+    .content {
+      padding: rem(12) rem(16);
+      cursor: pointer;
+      .title {
+        font-size: rem(16);
+        margin-bottom: rem(4);
+      }
+      .description {
+        font-weight: 400;
+        font-size: rem(12);
+        line-height: rem(14);
+        margin-bottom: rem(8);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .actions {
+        .counter {
+          height: rem(36.8);
+        }
+      }
+    }
+  }
+  &_img {
+    height: rem(134);
+    position: relative;
+    cursor: pointer;
+  }
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: rem(16) rem(8) rem(8);
+    cursor: pointer;
+    & > div:not(.actions) {
+      flex: 1;
+    }
+    .title {
+      font-size: rem(14);
+      margin-bottom: rem(8);
+      font-weight: 500;
+      color: var(--darkgray-2);
+    }
+    .description {
+      font-weight: 400;
+      font-size: rem(12);
+      line-height: 120%;
+      color: var(--text-light);
+    }
+    .actions {
+      .counter {
+        height: rem(40);
+      }
+    }
+  }
+  @include media($lg) {
+    height: rem(359);
+    width: rem(228);
+    &_img {
+      height: rem(181);
+    }
+    .content {
+      padding: rem(12) rem(16);
+      .title {
+        font-size: rem(20);
+        font-weight: 500;
+        margin-bottom: rem(16);
+      }
+      .description {
+        font-size: 1rem;
+      }
+    }
+    .actions {
+      .counter {
+        height: rem(44.8);
+      }
+    }
+  }
+  animation: fadeout 1s ease forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog_content {
+  z-index: 1;
+  position: relative;
+  h4 {
+    font-size: rem(14);
+    font-weight: 500;
+    color: var(--darkgray-1);
+  }
+  .single_modifier {
+    margin-top: rem(20);
+    h4 {
+      margin-bottom: rem(12);
+    }
+  }
+  .modifier_group,
+  .option_group {
+    border: 1px solid var(--lightgray-2);
+    border-radius: rem(12);
+    padding: rem(12) rem(12) rem(3);
+    margin-top: rem(20);
+    h4 {
+      margin-bottom: 3px;
+    }
+  }
+  .option_group {
+    .option {
+      :global .MuiFormControlLabel-label {
+        font-size: rem(12);
+      }
+    }
+  }
+}

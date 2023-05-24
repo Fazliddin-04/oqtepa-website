@@ -1,0 +1,79 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+@import 'styles/components.scss';
+@import 'styles/common.scss';
+
+.navbar {
+  width: 100%;
+  height: rem(50);
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  &.catalog {
+    .flexbox {
+      .wrapper {
+        display: none;
+      }
+    }
+  }
+  .flexbox {
+    gap: rem(4);
+    .children {
+      flex: 1;
+    }
+    .wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .menuIcon {
+    color: var(--black-1);
+    border-radius: rem(12);
+    transition: 300ms;
+    &:hover {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
+  }
+  .userIconLoggedIn {
+    display: none;
+  }
+  .userIconLoggedOut {
+    display: none;
+  }
+  .iconButton {
+    justify-content: center;
+    border-radius: rem(12);
+  }
+  .cartButton {
+    @include nav_item;
+  }
+  @include media($lg) {
+    height: fit-content;
+    padding: rem(16) 0;
+    position: static;
+    &.catalog {
+      .flexbox {
+        .wrapper {
+          display: flex;
+        }
+      }
+    }
+    .flexbox {
+      gap: rem(12);
+      .wrapper {
+        gap: rem(12);
+      }
+    }
+    .userIconLoggedIn {
+      @include nav_item;
+    }
+    .userIconLoggedOut {
+      @include nav_item;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "daily": "Ежедневно",
+  "branches": "Филиалы",
+  "branch": "Филиал",
+  "list": "Список",
+  "map": "Карта",
+  "opening_hours": "Часы работы",
+  "address": "Адрес",
+  "schedule": "График работы",
+  "phone_number": "Номер телефона",
+  "phone": "Телефон",
+  "destination": "Пункт назначения",
+  "mon-sun": "Пн-Вс",
+  "open_until": "Открыт до {{work_hour_end}}",
+  "closed_until": "Закрыто до {{work_hour_start}}",
+  "works_around_the_clock": "Работает круглосуточно",
+  "order_pickup": "Заказать самовывоз"
+}

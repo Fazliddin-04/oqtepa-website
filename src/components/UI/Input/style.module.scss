@@ -1,0 +1,78 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+
+.formControl {
+  width: 100%;
+  label {
+    font-size: rem(14);
+    color: var(--black-2);
+  }
+  .input_wrapper {
+    margin-top: rem(4);
+    height: fit-content;
+    position: relative;
+    .input {
+      width: 100%;
+      border: 1px solid var(--lightgray-3);
+      padding: rem(10) rem(16);
+      border-radius: rem(12);
+      appearance: none;
+      -webkit-appearance: none;
+      transition: 150ms;
+      &.error {
+        border-color: red;
+      }
+      &.disabled {
+        border-color: var(--lightgray);
+        background-color: var(--lightgray);
+        cursor: not-allowed;
+      }
+      &:focus {
+        border-color: var(--secondary-brand-color);
+        outline: none;
+      }
+      &[type='number']::-webkit-outer-spin-button,
+      &[type='number']::-webkit-inner-spin-button {
+        appearance: none;
+        margin: 0;
+      }
+      &[type='number'] {
+        appearance: textfield;
+      }
+    }
+    .edit {
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      right: rem(20);
+      color: var(--midgray-1);
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+  &.phone {
+    .input_wrapper {
+      &::before {
+        content: '+998 ';
+        position: absolute;
+        top: 50%;
+        left: rem(15);
+        transform: translateY(-50%);
+        z-index: 1;
+        line-height: 1.2;
+      }
+      .input {
+        padding-left: rem(57);
+      }
+    }
+  }
+
+  @include media($lg) {
+    label {
+      font-size: rem(16);
+    }
+    .input_wrapper {
+      margin-top: rem(8);
+    }
+  }
+}

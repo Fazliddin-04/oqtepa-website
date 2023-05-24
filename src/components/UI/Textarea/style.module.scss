@@ -1,0 +1,19 @@
+@import 'styles/unit.scss';
+
+.formControl {
+  label {
+    color: var(--text-light);
+  }
+  .textarea {
+    width: 100%;
+    height: rem(96);
+    border: 1px solid var(--lightgray-3);
+    padding: rem(12) rem(16);
+    border-radius: rem(12);
+    resize: vertical;
+    &:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+  }
+}

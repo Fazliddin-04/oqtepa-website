@@ -1,0 +1,200 @@
+@import 'styles/unit.scss';
+@import 'styles/media.scss';
+
+.dialog {
+  &.authorization {
+    .title {
+      padding: rem(44) rem(16) rem(8) rem(16);
+      font-size: rem(20);
+      text-align: left;
+    }
+    .closeIcon {
+      top: rem(16);
+      right: rem(16);
+    }
+    .content {
+      padding: 0 rem(16) rem(16) rem(16);
+      .descr {
+        font-size: rem(14);
+        margin-top: 0;
+        margin-bottom: rem(24);
+        text-align: left;
+      }
+    }
+  }
+  &.alert {
+    .alert_image {
+      position: relative;
+      height: rem(162);
+      overflow: hidden;
+    }
+    .title {
+      padding: rem(16) 0 0;
+      font-size: rem(20);
+    }
+    .closeIcon {
+      top: rem(16);
+      right: rem(16);
+    }
+    .content {
+      padding: 0;
+      .descr {
+        margin-top: rem(12);
+        margin-bottom: rem(24);
+      }
+    }
+    :global .MuiPaper-root {
+      padding: rem(56) 1rem 1rem;
+    }
+  }
+  &.map {
+    .title {
+      padding-top: rem(24);
+      text-align: left;
+    }
+    .closeIcon {
+      top: rem(16);
+      right: rem(16);
+    }
+    .content {
+      width: 100%;
+    }
+  }
+  &.success {
+    text-align: center;
+    .title {
+      padding-top: rem(24);
+    }
+    .content {
+      .descr {
+        padding-left: rem(36);
+        padding-right: rem(36);
+      }
+      .orderNo {
+        font-weight: 700;
+        font-size: rem(20);
+        letter-spacing: 0.38px;
+        color: #000000;
+      }
+    }
+  }
+  .title {
+    padding-top: rem(60);
+    padding-bottom: rem(8);
+    text-align: center;
+    font-weight: 700;
+    font-size: rem(24);
+    &.titleS {
+      font-weight: 700;
+      font-size: rem(20);
+      line-height: rem(23);
+      letter-spacing: -0.02em;
+      color: #000000;
+    }
+  }
+  .content {
+    padding: rem(12);
+    padding-top: 0;
+    .descr {
+      color: var(--text-light);
+      font-weight: 400;
+      font-size: rem(14);
+      text-align: center;
+      margin-top: rem(8);
+      margin-bottom: rem(44);
+    }
+  }
+  .closeIcon {
+    position: absolute;
+    top: rem(32);
+    right: rem(32);
+    padding: 0;
+    width: rem(32);
+    height: rem(32);
+    min-width: 0;
+    color: #000;
+    background-color: #fff;
+  }
+  :global .MuiPaper-root {
+    border-radius: rem(12);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar-track {
+      display: none;
+    }
+  }
+  @include media($lg) {
+    .content {
+      padding: rem(32);
+      padding-top: 0;
+      .descr {
+        padding-left: 0;
+        padding-right: 0;
+        font-weight: 400;
+        font-size: rem(18);
+        margin-top: rem(8);
+        margin-bottom: rem(32);
+      }
+    }
+    &.map {
+      .closeIcon {
+        top: rem(24);
+        right: rem(24);
+      }
+    }
+    &.authorization {
+      .title {
+        padding: rem(60) rem(16) rem(8) rem(16);
+        font-size: rem(32);
+        text-align: center;
+      }
+      .closeIcon {
+        top: rem(32);
+        right: rem(32);
+      }
+      .content {
+        padding: 0 rem(32) rem(32) rem(32);
+        .descr {
+          font-size: rem(18);
+          margin-bottom: rem(32);
+          text-align: center;
+        }
+      }
+    }
+    &.success {
+      .title {
+        padding-top: rem(32);
+      }
+      .content {
+        padding-top: 0;
+      }
+      .orderNo {
+        font-weight: 600;
+        font-size: rem(24);
+      }
+    }
+    &.alert {
+      .alert_image {
+        height: rem(252);
+        border-radius: 0;
+      }
+      .title {
+        padding: rem(24) 0 0;
+        font-size: rem(32);
+      }
+      .closeIcon {
+        top: rem(24);
+        right: rem(24);
+      }
+      .content {
+        padding: 0 rem(32) rem(32) rem(32);
+        .descr {
+          margin-bottom: rem(32);
+        }
+      }
+      :global .MuiPaper-root {
+        padding: 0;
+      }
+    }
+  }
+}
